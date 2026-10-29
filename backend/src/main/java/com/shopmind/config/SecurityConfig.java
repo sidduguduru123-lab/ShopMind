@@ -42,9 +42,19 @@ public class SecurityConfig {
                 .requestMatchers(
                     "/api/auth/**",
                     "/h2-console/**",
-                    "/actuator/**"
+                    "/actuator/**",
+                    "/",
+                    "/index.html",
+                    "/favicon.svg",
+                    "/assets/**",
+                    "/*.js",
+                    "/*.css",
+                    "/*.svg",
+                    "/*.ico",
+                    "/*.png"
                 ).permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/api/**").authenticated()
+                .anyRequest().permitAll()
             )
             .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authenticationProvider(authenticationProvider())

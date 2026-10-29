@@ -105,6 +105,19 @@ python main.py
 
 ---
 
+## ☁️ Deployment on Render
+
+### Single Fullstack Web Service (Recommended via Docker)
+1. Go to **Render Dashboard** → **New Web Service** → Connect `https://github.com/sidduguduru123-lab/ShopMind`.
+2. Configure settings:
+   - **Environment / Runtime**: `Docker` *(important: do NOT choose Node for Spring Boot backend)*
+   - **Dockerfile Path**: `Dockerfile`
+3. Add Environment Variable:
+   - `DATABASE_URL`: `postgresql://tt_f1l8_user:iqKceflLib9k0Z7Cji1oQnSkN7xLbSm8@dpg-dbhd0r1srm7s73fgj84g-a/tt_f1l8`
+4. Click **Create Web Service**. Render will automatically build the React frontend, package the Spring Boot backend, and start the app connected to your Render PostgreSQL database!
+
+---
+
 ## 🔐 Demo Credentials
 - **Store Owner**: `owner` / `owner123`
 - **Store Manager**: `manager1` / `manager123`

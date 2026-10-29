@@ -1,0 +1,21 @@
+# Dependencies & Builds
+frontend/node_modules/
+frontend/.vite-temp/
+backend/target/
+*.class
+
+# Python
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# Database files
+*.mv.db
+*.trace.db
+
+# IDE & OS
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

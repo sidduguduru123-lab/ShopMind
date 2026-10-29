@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: synapse-omnichannel
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: DATABASE_URL
+        value: postgresql://tt_f1l8_user:iqKceflLib9k0Z7Cji1oQnSkN7xLbSm8@dpg-dbhd0r1srm7s73fgj84g-a/tt_f1l8
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
