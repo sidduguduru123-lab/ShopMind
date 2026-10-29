@@ -65,17 +65,17 @@ export default function DashboardView({ onNavigate }) {
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
             <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Executive Command Center</h1>
-            <span className="badge badge-ai" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
-              <Sparkles size={12} /> Real-Time Telemetry
+            <span className="badge badge-synapse" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+              <Sparkles size={12} /> Neural Telemetry
             </span>
           </div>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-            Cross-channel visibility across 3 fulfillment branches, live POS counters & AI engine.
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+            Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
           </p>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <label style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 500 }}>Fulfillment Branch:</label>
+          <label style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 500 }}>Fulfillment Node:</label>
           <select
             value={selectedBranch}
             onChange={(e) => setSelectedBranch(e.target.value)}
@@ -91,10 +91,10 @@ export default function DashboardView({ onNavigate }) {
               outline: 'none',
             }}
           >
-            <option value="ALL">All Network Branches (3)</option>
-            <option value="MUM">Mumbai Flagship (Bandra)</option>
-            <option value="BLR">Bengaluru Tech Park</option>
-            <option value="DEL">Delhi NCR Hub</option>
+            <option value="ALL">All Connected Channel Nodes (3)</option>
+            <option value="MUM">Mumbai Flagship (POS Node)</option>
+            <option value="BLR">Bengaluru Tech Park (E-Commerce Node)</option>
+            <option value="DEL">Delhi NCR Hub (Fulfillment Core)</option>
           </select>
 
           <button
@@ -104,6 +104,87 @@ export default function DashboardView({ onNavigate }) {
           >
             <ShoppingCart size={16} /> Open POS Checkout
           </button>
+        </div>
+      </div>
+
+      {/* Omnichannel Synaptic Connectivity Nodes */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '1rem',
+        }}
+      >
+        <div
+          className="neural-card"
+          style={{
+            padding: '1rem 1.25rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: 'rgba(6, 182, 212, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#06b6d4' }}>
+              <Zap size={20} />
+            </div>
+            <div>
+              <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)' }}>Mumbai Flagship Node</div>
+              <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>In-Store POS Terminal • Optical Scan</div>
+            </div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <span className="badge badge-success">Active • 12ms</span>
+            <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '2px' }}>₹68,400 Today</div>
+          </div>
+        </div>
+
+        <div
+          className="neural-card"
+          style={{
+            padding: '1rem 1.25rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: 'rgba(99, 102, 241, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6366f1' }}>
+              <Activity size={20} />
+            </div>
+            <div>
+              <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)' }}>Bengaluru Tech Park Node</div>
+              <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Online & E-Commerce Cart Stream</div>
+            </div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <span className="badge badge-info">Synced • 18ms</span>
+            <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '2px' }}>₹48,250 Today</div>
+          </div>
+        </div>
+
+        <div
+          className="neural-card"
+          style={{
+            padding: '1rem 1.25rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: 'rgba(168, 85, 247, 0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a855f7' }}>
+              <Boxes size={20} />
+            </div>
+            <div>
+              <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)' }}>Delhi NCR Distribution Hub</div>
+              <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Automated Fulfillment & Buffer</div>
+            </div>
+          </div>
+          <div style={{ textAlign: 'right' }}>
+            <span className="badge badge-ai">Streaming • 15ms</span>
+            <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '2px' }}>₹32,000 Today</div>
+          </div>
         </div>
       </div>
 
@@ -252,18 +333,18 @@ export default function DashboardView({ onNavigate }) {
           </div>
         </div>
 
-        {/* Right Column: AI Action Dispatch Center */}
+        {/* Right Column: Synaptic Neural Action Dispatch Center */}
         <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <div style={{ width: '8px', height: '8px', background: 'var(--primary-light)', borderRadius: '50%' }} />
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>AI Decision Dispatch</h3>
+              <div style={{ width: '8px', height: '8px', background: '#06b6d4', borderRadius: '50%', boxShadow: '0 0 8px #06b6d4' }} />
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Synaptic Neural Decision Dispatch</h3>
             </div>
-            <span className="badge badge-ai">Automated</span>
+            <span className="badge badge-synapse">Live Neural Stream</span>
           </div>
 
           <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-            High-priority operational interventions generated from real-time store telemetry:
+            High-priority operational interventions generated from real-time omnichannel neural telemetry:
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1, overflowY: 'auto' }}>

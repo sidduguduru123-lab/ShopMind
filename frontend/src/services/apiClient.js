@@ -1,5 +1,6 @@
 /**
- * ShopMind Unified API Client
+ * Synapse Omnichannel — Unified API Client
+ * "Uses a neural metaphor to highlight data connectivity across channels."
  * Seamlessly manages authentication tokens, fallback mock responses,
  * and calls to both Spring Boot (8080) and Python AI services (8000).
  */
@@ -8,25 +9,35 @@ const API_BASE = '/api';
 
 export const apiClient = {
   getToken() {
-    return localStorage.getItem('shopmind_token') || '';
+    return localStorage.getItem('synapse_token') || localStorage.getItem('shopmind_token') || '';
   },
 
   setToken(token) {
-    if (token) localStorage.setItem('shopmind_token', token);
-    else localStorage.removeItem('shopmind_token');
+    if (token) {
+      localStorage.setItem('synapse_token', token);
+      localStorage.setItem('shopmind_token', token);
+    } else {
+      localStorage.removeItem('synapse_token');
+      localStorage.removeItem('shopmind_token');
+    }
   },
 
   getUser() {
     try {
-      return JSON.parse(localStorage.getItem('shopmind_user') || 'null');
+      return JSON.parse(localStorage.getItem('synapse_user') || localStorage.getItem('shopmind_user') || 'null');
     } catch {
       return null;
     }
   },
 
   setUser(user) {
-    if (user) localStorage.setItem('shopmind_user', JSON.stringify(user));
-    else localStorage.removeItem('shopmind_user');
+    if (user) {
+      localStorage.setItem('synapse_user', JSON.stringify(user));
+      localStorage.setItem('shopmind_user', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('synapse_user');
+      localStorage.removeItem('shopmind_user');
+    }
   },
 
   async request(path, options = {}) {

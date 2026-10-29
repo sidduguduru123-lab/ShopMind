@@ -33,10 +33,10 @@ export default function ExpiryIntelligenceView() {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Perishable Expiry & Freshness Intelligence</h1>
-          <span className="badge badge-warning">FIFO + Markdown Optimization</span>
+          <span className="badge badge-synapse">Neural FIFO Optimization</span>
         </div>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-          Monitors FMCG batches, milk, and shelf-life horizons. Recommends dynamic markdown clearance before write-off deadlines.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+          Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
         </p>
       </div>
 

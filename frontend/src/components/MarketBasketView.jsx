@@ -19,10 +19,10 @@ export default function MarketBasketView({ onNavigate }) {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Market Basket Affinity & Association Mining</h1>
-          <span className="badge badge-ai">Apriori + FP-Growth Algorithm</span>
+          <span className="badge badge-synapse">Neural Co-Purchase Synapses</span>
         </div>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-          Uncovers hidden product co-purchasing patterns from 2,270 POS customer receipts to optimize store shelf placement and cross-sell bundles.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+          Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
         </p>
       </div>
 

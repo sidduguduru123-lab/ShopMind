@@ -16,10 +16,11 @@ import OrdersView from './components/OrdersView';
 import CustomersView from './components/CustomersView';
 import BranchesView from './components/BranchesView';
 import { apiClient } from './services/apiClient';
+import { Activity, Network, Zap } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
-  const [theme, setTheme] = useState('light'); // White Theme by default as requested
+  const [theme, setTheme] = useState('light');
   const [currentUser, setCurrentUser] = useState(() => apiClient.getUser());
   const [isAuthenticated, setIsAuthenticated] = useState(() => Boolean(apiClient.getToken()));
 
@@ -100,9 +101,67 @@ export default function App() {
           height: '100vh',
           overflowY: 'auto',
           background: 'var(--bg-primary)',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        {renderActiveView()}
+        {/* Top Synapse Neural Telemetry Banner */}
+        <header
+          style={{
+            height: '46px',
+            minHeight: '46px',
+            background: 'var(--bg-secondary)',
+            borderBottom: '1px solid var(--border-subtle)',
+            padding: '0 1.5rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            position: 'sticky',
+            top: 0,
+            zIndex: 30,
+            backdropFilter: 'blur(10px)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+            <span className="live-indicator" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+              <span>Synapse Omnichannel</span>
+              <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>—</span>
+              <span style={{ color: 'var(--text-secondary)', fontWeight: 500, fontSize: '0.74rem' }}>
+                Uses a neural metaphor to highlight data connectivity across channels.
+              </span>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '0.72rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: 'var(--text-muted)' }}>
+              <Zap size={13} color="#06b6d4" />
+              <span>Channels Linked:</span>
+              <span style={{ color: 'var(--text-primary)', fontWeight: 700 }}>POS • Online • Warehouse</span>
+            </div>
+            <div
+              style={{
+                background: 'rgba(16, 185, 129, 0.1)',
+                border: '1px solid rgba(16, 185, 129, 0.25)',
+                color: 'var(--accent-emerald)',
+                padding: '0.15rem 0.55rem',
+                borderRadius: '999px',
+                fontWeight: 700,
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.3rem',
+              }}
+            >
+              <span className="live-indicator-green" style={{ width: '6px', height: '6px' }} />
+              <span>Latency 14ms (100% Synced)</span>
+            </div>
+          </div>
+        </header>
+
+        {/* View Content */}
+        <div style={{ flex: 1 }}>
+          {renderActiveView()}
+        </div>
       </main>
     </div>
   );

@@ -119,11 +119,28 @@ export default function PosView() {
   };
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 420px', height: 'calc(100vh - 40px)', gap: '1rem', padding: '1.25rem', overflow: 'hidden' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 420px', height: 'calc(100vh - 46px)', gap: '1rem', padding: '1.25rem', overflow: 'hidden' }}>
       {/* LEFT: Product Catalog & Fast Barcode Entry */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', overflow: 'hidden' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', overflow: 'hidden' }}>
+        {/* Terminal Header */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <h2 style={{ fontSize: '1.35rem', fontWeight: 800 }}>POS Terminal & Omnichannel Billing</h2>
+              <span className="badge badge-synapse">Neural Node</span>
+            </div>
+            <p style={{ fontSize: '0.76rem', color: 'var(--text-secondary)', fontWeight: 500, marginTop: '2px' }}>
+              Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.72rem', background: 'rgba(6, 182, 212, 0.1)', border: '1px solid rgba(6, 182, 212, 0.25)', padding: '0.35rem 0.65rem', borderRadius: '8px', color: '#0891b2' }}>
+            <span className="live-indicator" />
+            <span>0ms Offline Edge Cache Active</span>
+          </div>
+        </div>
+
         {/* Search Bar & Scanner Input */}
-        <div className="glass-panel" style={{ padding: '0.85rem 1.25rem', display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+        <div className="glass-panel" style={{ padding: '0.85rem 1.25rem', display: 'flex', gap: '0.75rem', alignItems: 'center', flexShrink: 0 }}>
           <div style={{ position: 'relative', flex: 1 }}>
             <Search size={18} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
             <input
@@ -495,24 +512,33 @@ export default function PosView() {
           }}
         >
           <div
-            className="glass-panel"
+            className="glass-panel printable-receipt"
             style={{
               width: '100%',
-              maxWidth: '420px',
+              maxWidth: '430px',
               padding: '2rem',
               background: 'var(--bg-secondary)',
-              border: '1px solid var(--border-accent)',
+              border: '1px solid var(--border-neural)',
               display: 'flex',
               flexDirection: 'column',
               gap: '1.25rem',
+              boxShadow: 'var(--shadow-neural)',
             }}
           >
             <div style={{ textAlign: 'center' }}>
               <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(16, 185, 129, 0.15)', color: 'var(--accent-emerald)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem' }}>
                 <CheckCircle2 size={28} />
               </div>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>Transaction Successful!</h3>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{checkoutCompleted.invoiceNumber} • {checkoutCompleted.branch}</p>
+              <div style={{ fontSize: '0.78rem', fontWeight: 800, letterSpacing: '0.05em', color: '#06b6d4', textTransform: 'uppercase' }}>
+                SYNAPSE OMNICHANNEL
+              </div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginTop: '2px' }}>Transaction Successful!</h3>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '2px' }}>
+                {checkoutCompleted.invoiceNumber} • {checkoutCompleted.branch}
+              </p>
+              <div style={{ fontSize: '0.68rem', color: 'var(--text-secondary)', marginTop: '4px', fontStyle: 'italic' }}>
+                Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
+              </div>
             </div>
 
             <div style={{ background: 'var(--bg-tertiary)', padding: '1rem', borderRadius: 'var(--radius-md)', fontSize: '0.8rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>

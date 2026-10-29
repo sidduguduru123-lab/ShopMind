@@ -16,7 +16,7 @@ export default function CopilotView({ onNavigate }) {
   const [messages, setMessages] = useState([
     {
       sender: 'ai',
-      text: "Hello! I am your ShopMind Retail Copilot. I have full real-time access to your store inventory across Mumbai, Bengaluru, and Delhi branches, recent POS transactions, margin trends, and expiry schedules. What would you like to investigate today?",
+      text: "Hello! I am your Synapse Neural Copilot. I maintain real-time synaptic links across your fulfillment channels, store inventory in Mumbai, Bengaluru, and Delhi branches, POS checkout counters, margin trajectories, and expiry schedules. What would you like to investigate across the neural network today?",
       deepLink: null,
     },
   ]);
@@ -94,10 +94,10 @@ export default function CopilotView({ onNavigate }) {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Retail Intelligence AI Copilot</h1>
-          <span className="badge badge-ai">RAG + Telemetry Agent</span>
+          <span className="badge badge-synapse">Neural Telemetry Agent</span>
         </div>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-          Ask natural-language questions about product margins, reorder quantities, shrinkage risks, or store operations.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+          Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
         </p>
       </div>
 

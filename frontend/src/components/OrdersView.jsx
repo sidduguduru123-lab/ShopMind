@@ -70,10 +70,10 @@ export default function OrdersView() {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Omnichannel Store Orders</h1>
-          <span className="badge badge-ai">Ship-from-Store Engine</span>
+          <span className="badge badge-synapse">Neural Ship-from-Store</span>
         </div>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-          Real-time fulfillment tracking for online e-commerce orders routed automatically to nearest store inventory.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+          Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
         </p>
       </div>
 

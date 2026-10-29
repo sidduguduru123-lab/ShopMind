@@ -46,10 +46,10 @@ export default function SimulatorView() {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Retail What-If Scenario Lab</h1>
-          <span className="badge badge-ai">Micro-Economic Simulation</span>
+          <span className="badge badge-synapse">Neural Elasticity Simulation</span>
         </div>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-          Simulate price adjustments, discount campaigns, and localized ad spend to evaluate projected demand, revenue, and net profit before execution.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+          Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
         </p>
       </div>
 

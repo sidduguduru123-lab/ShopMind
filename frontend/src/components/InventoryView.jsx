@@ -35,10 +35,10 @@ export default function InventoryView() {
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
             <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Multi-Branch Inventory Ledger</h1>
-            <span className="badge badge-success">3 Branches Online</span>
+            <span className="badge badge-synapse">3 Channel Nodes Synced</span>
           </div>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-            Unified real-time inventory ledger with automated reorder levels and safety stock tracking.
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+            Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
           </p>
         </div>
 

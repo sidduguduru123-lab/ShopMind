@@ -14,8 +14,8 @@ from services.simulator_service import simulate_business_scenario
 from services.assistant_service import handle_assistant_query
 
 app = FastAPI(
-    title="ShopMind AI & Decision Support Intelligence Engine",
-    description="Microservice providing demand forecasting, smart reorder, market-basket analysis, anomaly detection, what-if simulations, and retail copilot.",
+    title="Synapse Omnichannel AI & Decision Support Intelligence Engine",
+    description="Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels. Microservice providing demand forecasting, smart reorder, market-basket analysis, anomaly detection, what-if simulations, and retail copilot.",
     version="1.0.0"
 )
 
@@ -56,7 +56,7 @@ class ProductReorderInput(BaseModel):
 
 @app.get("/health")
 def health_check():
-    return {"status": "HEALTHY", "service": "ShopMind AI Engine", "version": "1.0.0"}
+    return {"status": "HEALTHY", "service": "Synapse Omnichannel AI Engine", "version": "1.0.0"}
 
 @app.get("/api/ai/forecast/{product_id}")
 def get_forecast(

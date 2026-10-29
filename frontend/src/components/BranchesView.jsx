@@ -59,10 +59,10 @@ export default function BranchesView() {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <h1 style={{ fontSize: '1.85rem', fontWeight: 800 }}>Multi-Store Branch Operations</h1>
-          <span className="badge badge-success">3 Online Hubs</span>
+          <span className="badge badge-synapse">Omnichannel Neural Nodes</span>
         </div>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-          Inter-store stock balancing, regional sales contribution, and physical fulfillment center metrics.
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '0.25rem', fontWeight: 500 }}>
+          Synapse Omnichannel — Uses a neural metaphor to highlight data connectivity across channels.
         </p>
       </div>
 

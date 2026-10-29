@@ -47,10 +47,10 @@ public class DatabaseSeederService {
         Category stationery  = categoryRepo.save(new Category("Stationery & Office", "STAT", "Writing instruments and office supplies"));
 
         // ---- USERS ----
-        userRepo.save(new User("owner",    "owner@shopmind.com",    passwordEncoder.encode("owner123"),    "Ravi Kumar (Owner)",      Role.OWNER,    mumbai.getId()));
-        userRepo.save(new User("manager1", "manager@shopmind.com",  passwordEncoder.encode("manager123"),  "Priya Sharma (Manager)",  Role.MANAGER,  mumbai.getId()));
-        userRepo.save(new User("cashier1", "cashier@shopmind.com",  passwordEncoder.encode("cashier123"),  "Ankit Raj (Cashier)",     Role.EMPLOYEE, mumbai.getId()));
-        userRepo.save(new User("customer1","customer@shopmind.com", passwordEncoder.encode("customer123"), "Sneha Reddy (Customer)",  Role.CUSTOMER, mumbai.getId()));
+        userRepo.save(new User("owner",    "owner@synapseomnichannel.com",    passwordEncoder.encode("owner123"),    "Ravi Kumar (Owner)",      Role.OWNER,    mumbai.getId()));
+        userRepo.save(new User("manager1", "manager@synapseomnichannel.com",  passwordEncoder.encode("manager123"),  "Priya Sharma (Manager)",  Role.MANAGER,  mumbai.getId()));
+        userRepo.save(new User("cashier1", "cashier@synapseomnichannel.com",  passwordEncoder.encode("cashier123"),  "Ankit Raj (Cashier)",     Role.EMPLOYEE, mumbai.getId()));
+        userRepo.save(new User("customer1","customer@synapseomnichannel.com", passwordEncoder.encode("customer123"), "Sneha Reddy (Customer)",  Role.CUSTOMER, mumbai.getId()));
 
         // ---- SUPPLIERS ----
         Supplier supplier1 = supplierRepo.save(new Supplier("Agro Foods Distributors Pvt Ltd", "Mahesh Nair",   "mahesh@agrofoods.in",  "9876543210", "APMC Market, Vashi, Navi Mumbai", 4.7, 3));
@@ -80,7 +80,7 @@ public class DatabaseSeederService {
         Product p19 = productRepo.save(new Product("ELE-NIS-019","8906136850049","Noise ColorFit Pulse Smartwatch",       "AMOLED, 100+ sport modes, SpO2 & HR monitor",           electronics,"Noise",bd(2200),bd(3499),bd(18),5,30,"unit","https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",false));
         Product p20 = productRepo.save(new Product("ELE-SND-020","619659161708", "SanDisk 64GB Ultra Flash Drive",        "USB 3.0, up to 130 MB/s read speed",                    electronics,"SanDisk",bd(380),bd(549),bd(18),5,80,"unit","https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=400",false));
         Product p21 = productRepo.save(new Product("ELE-PRT-021","8904114902221","Portronics 20W Fast Charger",           "Dual USB-A & USB-C PD charging, foldable pin",           electronics,"Portronics",bd(400),bd(599),bd(18),5,60,"unit","https://images.unsplash.com/photo-1609592859236-a9ac0f76059a?w=400",false));
-        Product p22 = productRepo.save(new Product("FAS-TSH-022","8TSHMCPNY001", "Men's Classic Polo T-Shirt (Navy)",     "Premium pique cotton polo, regular fit",                 fashion,"ShopMind Basics",bd(280),bd(449),bd(12),5,100,"unit","https://images.unsplash.com/photo-1581791538161-8a1ffe84e5f1?w=400",false));
+        Product p22 = productRepo.save(new Product("FAS-TSH-022","8TSHMCPNY001", "Men's Classic Polo T-Shirt (Navy)",     "Premium pique cotton polo, regular fit",                 fashion,"Synapse Essentials",bd(280),bd(449),bd(12),5,100,"unit","https://images.unsplash.com/photo-1581791538161-8a1ffe84e5f1?w=400",false));
         Product p23 = productRepo.save(new Product("FAS-SHO-023","8902466043208","Sparx Running Shoes (Size 9)",          "Lightweight mesh upper with bounce-back foam sole",      fashion,"Sparx",bd(650),bd(999),bd(12),3,50,"unit","https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",false));
         Product p24 = productRepo.save(new Product("STA-NBK-024","8901764000115","Classmate Spiral Notebook (300 pgs)",   "Hard cover A4 ruled, 300 pages, long-life binding",      stationery,"Classmate",bd(80),bd(110),bd(0),10,200,"unit","https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?w=400",false));
         Product p25 = productRepo.save(new Product("STA-PEN-025","8901055003141","Reynolds Trimax Gel Pen (Pack of 5)",   "Smooth 0.5mm gel ink, blue, long-lasting cartridge",     stationery,"Reynolds",bd(60),bd(85),bd(0),20,300,"unit","https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=400",false));
